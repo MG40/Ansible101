@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   tasks:
-  - name: ensure sysstat is removed
+  - name: ensure latest sysstat is installed
     yum:
       name: sysstat
-      state: present
+      state: latest
