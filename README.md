@@ -26,7 +26,7 @@ After the setup is completed,
   add ssh key from the control node `cat ~/.ssh/id_rsa.pub` to the host nodes `~centos/.ssh/authorized_keys` 
   to authorize the control node to ssh to the host nodes.
 
-Exercises:
+# Exercises:
 
   1. Test if the control node can ssh into the host nodes, 
                         `ansible all -i myhosts -m ping`
