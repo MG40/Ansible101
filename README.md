@@ -1,5 +1,5 @@
 # Ansible101
-CloudSeeders Workshop
+CloudSeeders Workshop - To Join https://cloudseeders.org/
 
 This demo is designed to demostrate Ansible basics.
 
