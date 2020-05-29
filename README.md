@@ -5,10 +5,10 @@ This demo is designed to demostrate Ansible basics.
 
 It consists of the following files:
 
-  -> Dockerfile    // to build docker images for control and host nodes
-  -> Makefile      // for operations listed below
-  -> play/myhosts  // inventory file
-  -> play/site.yml // sample playbook
+  - Dockerfile    // to build docker images for control and host nodes
+  - Makefile      // for operations listed below
+  - play/myhosts  // inventory file
+  - play/site.yml // sample playbook
    
 
 The Makefile can be used for the following operations:
@@ -28,10 +28,15 @@ After the setup is completed,
 
 Exercises:
 
-  1. Test if the control node can ssh into the host nodes, `ansible all -i myhosts -m ping`
-  2. Run the supplied playbook, `ansible-playbook -i myhosts site.yml`
-  3. Run Ad-Hoc command to verify the package has been installed `ansible all -i myhosts -m command -a "rpm -q sysstat"`
+  1. Test if the control node can ssh into the host nodes, 
+                        `ansible all -i myhosts -m ping`
+  2. Run the supplied playbook, 
+                        `ansible-playbook -i myhosts site.yml`
+  3. Run Ad-Hoc command to verify the package has been installed 
+                        `ansible all -i myhosts -m command -a "rpm -q sysstat"`
   4. Change the playbook to ensure the package is removed, 
                         `sed -i -e 's/state: latest/state: absent/' -e 's/ensure.*/ensure sysstat is removed/' site.yml`
-  5. Run the playbook again: `ansible-playbook -i myhosts site.yml`
-  6. Verify the package has been removed, `ansible all -i myhosts -m command -a "rpm -q sysstat"`
+  5. Run the playbook again: 
+                        `ansible-playbook -i myhosts site.yml`
+  6. Verify the package has been removed, 
+                        `ansible all -i myhosts -m command -a "rpm -q sysstat"`
