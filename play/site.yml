@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: ensure sysstat is removed
+    yum:
+      name: sysstat
+      state: present
