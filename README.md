@@ -5,10 +5,10 @@ This demo is designed to demostrate Ansible basics.
 
 It consists of the following files:
 
-  - Dockerfile    // to build docker images for control and host nodes
-  - Makefile      // for operations listed below
-  - play/myhosts  // inventory file
-  - play/site.yml // sample playbook
+  - `Dockerfile` -  to build docker images for control and host nodes
+  - `Makefile` -  for operations listed below
+  - `play/myhosts` -  inventory file
+  - `play/site.yml` - sample playbook
    
 
 The Makefile can be used for the following operations:
